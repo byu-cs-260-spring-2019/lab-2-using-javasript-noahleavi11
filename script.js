@@ -13,7 +13,7 @@ window.onload = function(){
       const json = await response.json();
 
       var results = "";
-      results += '<h2>Weather in ' + json.name + "</h2>";
+      results += '<h1>Weather in ' + json.name + "</h1>";
       for (var i=0; i < json.weather.length; i++) {
         results += '<img src="http://openweathermap.org/img/w/' + json.weather[i].icon + '.png"/>';
       }
@@ -37,9 +37,12 @@ window.onload = function(){
 
       var forecast = "";
       for (var i=0; i < json2.list.length; i++) {
-        forecast += "<h2>" + moment(json2.list[i].dt_txt).format('MMMM Do YYYY, h:mm:ss a') + "</h2>";
-        forecast += "<p>Temperature: " + json2.list[i].main.temp + "</p>";
-        forecast += '<img src="http://openweathermap.org/img/w/' + json2.list[i].weather[0].icon + '.png"/>'
+        forecast += '<div class="forecast">'
+        forecast += '<div class="date"><h2>' + moment(json2.list[i].dt_txt).format('MMMM Do YYYY, h a') + '</h2></div>';
+        // 'MMMM Do YYYY, h:mm:ss a'
+        forecast += '<div class="hourly_temp"><p>Temperature: ' + json2.list[i].main.temp + ' &deg;F' + "</p></div>";
+        forecast += '<div class="hourly_picture"><img src="http://openweathermap.org/img/w/' + json2.list[i].weather[0].icon + '.png"/></div>'
+        forecast +='</div>'
       }
       document.getElementById("forecastResults").innerHTML = forecast;
     }catch{

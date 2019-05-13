@@ -1,0 +1,33 @@
+body {
+  font-family: "Trebuchet MS", Helvetica;
+}
+
+#weatherResults {
+  text-align: center;
+  vertical-align: center;
+}
+
+#forecastResults{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.forecast {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between ! important;
+}
+
+.date {
+  flex: 30%;
+}
+
+.hourly_temp {
+  flex: 30%;
+}
+
+.hourly_picture {
+  flex: 10%;
+}
