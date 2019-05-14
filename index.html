@@ -8,7 +8,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Noah's Ark</a>
+      <a class="navbar-brand" href="index.html">Noah's Ark</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -19,18 +19,16 @@
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Spot-on weather so you'll never need an ark!</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input id="weatherInput"class="form-control mr-sm-2" type="text" placeholder="Enter a U.S City">
-          <button id="weatherSubmit" class="btn btn-outline-primary my-2 my-sm-0" type="submit" value="Submit">Search</button>
-        </form>
       </div>
     </nav>
-    <!-- <h1>Lab 2</h1> -->
-    <!-- <form>
-      <label>Enter a U.S. city</label>
-      <input id="weatherInput" type="text"></input><br/>
-      <input id="weatherSubmit" type="submit" value="Submit"></input>
-    </form> -->
+
+    <div id="welcome">
+      <p>Discover Your<br>Weather</p>
+      <form class="form-inline my-2 my-lg-0">
+        <input id="weatherInput"class="form-control mr-sm-2" type="text" placeholder="Enter a U.S City">
+        <button id="weatherSubmit" class="btn btn-outline-primary my-2 my-sm-0" type="submit" value="Submit" onclick="document.getElementById('welcome').style.display='none'">Search</button>
+      </form>
+    </div>
 
 
     <div id="weatherResults">
